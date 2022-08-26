@@ -11,17 +11,13 @@ class GameHero extends SimplePlayer with ObjectCollision {
             idleDown: GameSpriteSheet.heroIdleDown,
             idleUp: GameSpriteSheet.heroIdleUp,
           ),
-          size: Vector2(40, 40),
+          size: Vector2(32, 32),
         ) {
     setupCollision(
       CollisionConfig(
         collisions: [
           CollisionArea.circle(
-            radius: 25.5,
-            align: Vector2(
-              12.5,
-              0,
-            ),
+            radius: 20,
           ),
         ],
       ),

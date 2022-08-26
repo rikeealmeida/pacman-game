@@ -21,7 +21,7 @@ class HomeView extends GetView<HomeController> {
         keyboardConfig: KeyboardConfig(),
         directional: JoystickDirectional(),
       ),
-      player: GameHero(Vector2(20, 450)),
+      player: GameHero(Vector2(20, 457)),
       decorations: [
         MapDecoration(
           Vector2(20, 20),
