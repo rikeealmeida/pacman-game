@@ -1,4 +1,4 @@
-# pacman_game
+# pacman
 
 A new Flutter project.
 

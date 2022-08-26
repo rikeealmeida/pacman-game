@@ -1,5 +1,7 @@
+
 import 'package:bonfire/bonfire.dart';
-import 'package:pacman_game/app/modules/game_hero/data/game_sprite_sheet.dart';
+
+import 'game_sprite_sheet.dart';
 
 class GameHero extends SimplePlayer with ObjectCollision {
   GameHero(Vector2 position)

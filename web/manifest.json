@@ -1,6 +1,6 @@
 {
-    "name": "pacman_game",
-    "short_name": "pacman_game",
+    "name": "pacman",
+    "short_name": "pacman",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",
