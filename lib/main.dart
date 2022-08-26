@@ -1,5 +1,6 @@
 import 'package:bonfire/bonfire.dart';
 import 'package:flutter/material.dart';
+import 'package:pacman/game_enemy.dart';
 
 import 'game_hero.dart';
 
@@ -43,6 +44,9 @@ class _GameState extends State<Game> {
         // directional: JoystickDirectional(),
       ),
       player: GameHero(Vector2(20, 457)),
+      enemies: [
+        GameEnemy(Vector2(80, 457)),
+      ],
     );
   }
 }

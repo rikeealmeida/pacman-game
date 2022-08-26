@@ -1,4 +1,3 @@
-
 import 'package:bonfire/bonfire.dart';
 
 import 'game_sprite_sheet.dart';
@@ -8,10 +7,14 @@ class GameHero extends SimplePlayer with ObjectCollision {
       : super(
           position: position,
           animation: SimpleDirectionAnimation(
-            idleRight: GameSpriteSheet.heroIdleLeft,
-            runRight: GameSpriteSheet.heroIdleRight,
-            idleDown: GameSpriteSheet.heroIdleDown,
-            idleUp: GameSpriteSheet.heroIdleUp,
+            runRight: HeroSpriteSheet.heroIdleRight,
+            idleRight: HeroSpriteSheet.heroIdleRight,
+            idleLeft: HeroSpriteSheet.heroIdleLeft,
+            idleDown: HeroSpriteSheet.heroIdleDown,
+            idleUp: HeroSpriteSheet.heroIdleUp,
+            runDown: HeroSpriteSheet.heroIdleDown,
+            runLeft: HeroSpriteSheet.heroIdleLeft,
+            runUp: HeroSpriteSheet.heroIdleUp,
           ),
           size: Vector2(32, 32),
         ) {
