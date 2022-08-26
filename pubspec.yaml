@@ -8,10 +8,11 @@ version: 1.0.0+1
 environment:
   sdk: '>=2.19.0-76.0.dev <3.0.0'
 
-Dependencies:
+dependencies:
   flutter:
     sdk: flutter
   cupertino_icons: ^1.0.2
+  bonfire: ^2.9.1
 
 dev_dependencies:
   flutter_test:
@@ -27,8 +28,6 @@ flutter:
   assets:
     - assets/images/map/
     - assets/images/
-dependencies:
-  bonfire: ^2.9.1
 
   # To add custom fonts to your application, add a fonts section here,
   # in this "flutter" section. Each entry in this list should have a
