@@ -1,5 +1,5 @@
 import 'package:bonfire/bonfire.dart';
-import 'package:pacman/game_sprite_sheet.dart';
+import 'package:pacman/app/modules/sprites/game_sprite_sheet.dart';
 
 class GameEnemy extends SimpleEnemy
     with ObjectCollision, AutomaticRandomMovement {

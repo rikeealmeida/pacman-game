@@ -1,4 +1,4 @@
-package com.example.pacman
+package br.com.almeida.pacman
 
 import io.flutter.embedding.android.FlutterActivity
 

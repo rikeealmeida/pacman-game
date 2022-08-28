@@ -1,6 +1,5 @@
 import 'package:bonfire/bonfire.dart';
-import 'package:pacman/game_hero.dart';
-import 'package:pacman/interface/playerInterface.dart';
+import 'package:pacman/app/modules/game/controllers/game_hero.dart';
 
 class Food extends GameDecoration with ObjectCollision {
   Food(Vector2 position)
@@ -27,7 +26,7 @@ class Food extends GameDecoration with ObjectCollision {
         print('tocou a comida pequena!');
         this.removeFromParent();
       },
-      radiusVision: .5,
+      radiusVision: 1,
     );
     super.update(dt);
   }
@@ -57,7 +56,7 @@ class BigFood extends GameDecoration with ObjectCollision {
       observed: (player) {
         this.removeFromParent();
       },
-      radiusVision: 5,
+      radiusVision: 1,
     );
     super.update(dt);
   }
