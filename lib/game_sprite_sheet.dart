@@ -45,8 +45,8 @@ class EnemySpriteSheet {
         SpriteAnimationData.sequenced(
           amount: 2,
           stepTime: 0.2,
-          textureSize: Vector2(16, 16),
-          texturePosition: Vector2(0, 0),
+          textureSize: Vector2(184, 192),
+          texturePosition: Vector2(780, 200),
         ),
       );
   static Future<SpriteAnimation> get enemyIdleRight => SpriteAnimation.load(
@@ -54,8 +54,8 @@ class EnemySpriteSheet {
         SpriteAnimationData.sequenced(
           amount: 2,
           stepTime: 0.2,
-          textureSize: Vector2(16, 16),
-          texturePosition: Vector2(0, 0),
+          textureSize: Vector2(184, 192),
+          texturePosition: Vector2(780, 200),
         ),
       );
   static Future<SpriteAnimation> get enemyIdleUp => SpriteAnimation.load(
@@ -63,8 +63,8 @@ class EnemySpriteSheet {
         SpriteAnimationData.sequenced(
           amount: 2,
           stepTime: 0.2,
-          textureSize: Vector2(16, 16),
-          texturePosition: Vector2(0, 0),
+          textureSize: Vector2(184, 192),
+          texturePosition: Vector2(780, 200),
         ),
       );
   static Future<SpriteAnimation> get enemyIdleDown => SpriteAnimation.load(
@@ -72,8 +72,9 @@ class EnemySpriteSheet {
         SpriteAnimationData.sequenced(
           amount: 2,
           stepTime: 0.2,
-          textureSize: Vector2(16, 16),
-          texturePosition: Vector2(0, 0),
+          textureSize: Vector2(184, 192),
+          texturePosition: Vector2(780, 200),
         ),
       );
 }
+
