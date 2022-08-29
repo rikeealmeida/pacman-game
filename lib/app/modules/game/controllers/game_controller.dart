@@ -1,7 +1,19 @@
 import 'package:get/get.dart';
 
-class GameController extends GetxController {
-  //TODO: Implement HomeController
+class CustomGameController extends GetxController {
+  final points = 0.obs;
+  final isBuffered = false.obs;
+
+  @override
+  void increasePoints() {
+    if (isBuffered.value == true) {
+      points.value = points.value + 20;
+    } else {
+      points.value = points.value + 10;
+    }
+
+    print(points.value);
+  }
 
   @override
   void onInit() {

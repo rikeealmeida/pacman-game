@@ -2,12 +2,14 @@ import 'package:bonfire/bonfire.dart';
 import 'package:flutter/material.dart';
 
 import 'package:get/get.dart';
+import 'package:pacman/app/modules/game/controllers/game_controller.dart';
 import 'package:pacman/app/modules/game/controllers/game_enemy.dart';
 import 'package:pacman/app/modules/game/controllers/game_food.dart';
 import 'package:pacman/app/modules/game/controllers/game_hero.dart';
-import 'package:pacman/app/modules/interfaces/player_Interface.dart';
+import 'package:pacman/app/modules/game/interfaces/game_interface.dart';
+import 'package:pacman/app/modules/game/interfaces/player_Interface.dart';
 
-class GameView extends GetView<GameController> {
+class GameView extends GetView<CustomGameController> {
   const GameView({Key? key}) : super(key: key);
   @override
   Widget build(BuildContext context) {
@@ -51,6 +53,9 @@ class GameView extends GetView<GameController> {
         ],
         overlayBuilderMap: {
           'playerInterface': (context, game) => PlayerInterface(
+                game: game,
+              ),
+          'gameInterface': (context, game) => GameUI(
                 game: game,
               )
         },

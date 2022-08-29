@@ -1,5 +1,7 @@
 import 'package:bonfire/bonfire.dart';
+import 'package:pacman/app/modules/game/controllers/game_controller.dart';
 import 'package:pacman/app/modules/game/controllers/game_hero.dart';
+import 'package:pacman/app/modules/game/views/game_view.dart';
 
 class Food extends GameDecoration with ObjectCollision {
   Food(Vector2 position)
@@ -19,12 +21,13 @@ class Food extends GameDecoration with ObjectCollision {
     //   ],
     // ));
   }
+
   @override
   void update(double dt) {
-    this.seeComponentType<GameHero>(
+    seeComponentType<GameHero>(
       observed: (player) {
-        print('tocou a comida pequena!');
-        this.removeFromParent();
+        GameView().controller.increasePoints();
+        removeFromParent();
       },
       radiusVision: 1,
     );
@@ -52,9 +55,20 @@ class BigFood extends GameDecoration with ObjectCollision {
 
   @override
   void update(double dt) {
-    this.seeComponentType<GameHero>(
-      observed: (player) {
-        this.removeFromParent();
+    seeComponentType<GameHero>(
+      observed: (player) async {
+        const GameView().controller.isBuffered.value = true;
+        print('Dobro de pontos ativados');
+        await Future.delayed(
+          const Duration(
+            seconds: 10,
+          ),
+          () {
+            GameView().controller.isBuffered.value = false;
+            print('Dobro de pontos desativados');
+          },
+        );
+        removeFromParent();
       },
       radiusVision: 1,
     );

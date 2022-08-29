@@ -1,6 +1,6 @@
 import 'package:bonfire/bonfire.dart';
 import 'package:flutter/material.dart';
-import 'package:pacman/app/modules/sprites/game_sprite_sheet.dart';
+import 'package:pacman/app/modules/game/sprites/game_sprite_sheet.dart';
 
 
 class GameHero extends SimplePlayer with ObjectCollision {

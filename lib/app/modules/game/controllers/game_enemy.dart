@@ -1,5 +1,6 @@
 import 'package:bonfire/bonfire.dart';
-import 'package:pacman/app/modules/sprites/game_sprite_sheet.dart';
+import 'package:pacman/app/modules/game/sprites/game_sprite_sheet.dart';
+import 'package:pacman/app/modules/game/views/game_view.dart';
 
 class GameEnemy extends SimpleEnemy
     with ObjectCollision, AutomaticRandomMovement {
@@ -17,7 +18,7 @@ class GameEnemy extends SimpleEnemy
               idleDown: EnemySpriteSheet.enemyIdleDown,
               runDown: EnemySpriteSheet.enemyIdleDown,
             ),
-            speed: 50) {
+            speed: 40) {
     setupCollision(
       CollisionConfig(
         collisions: [CollisionArea.rectangle(size: Vector2(16, 16))],
@@ -34,9 +35,15 @@ class GameEnemy extends SimpleEnemy
     seeAndMoveToPlayer(
       radiusVision: 100,
       closePlayer: (player) {
-        player.die();
+        if (GameView().controller.isBuffered.value == true) {
+          removeFromParent();
+          GameView().controller.points.value =
+              GameView().controller.points.value + 100;
+        } else {
+          player.die();
+        }
       },
-      margin: 1,
+      margin: .5,
     );
   }
 }

@@ -1,16 +1,9 @@
 # pacman
 
-A new Flutter project.
+Uma réplica inspirada no jogo PacMan
 
-## Getting Started
+## Para rodar
 
-This project is a starting point for a Flutter application.
+É necessário ter o Flutter Sdk instalado na máquina, ao instalar executar o seguinte comando no terminal dentro da pasta do projeto: "flutter run" e selecionar a opção chrome ou windows
 
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+utilizar as setas direcionais do teclado para controlar o personagem.
