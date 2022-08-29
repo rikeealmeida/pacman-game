@@ -46,46 +46,39 @@ class _PlayerInterfaceState extends State<PlayerInterface> {
   @override
   Widget build(BuildContext context) {
     return Positioned(
-      bottom: 130,
-      child: Obx(
-        () => Material(
-          child: Container(
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Text(
-                  'Pontuação: ${GameView().controller.points}',
+        bottom: 130,
+        child: Obx(
+          () => playerIsDead
+              ? Material(
+                color: Colors.black,
+                child: Center(
+                  child: Text(
+                    'Game over!',
+                    style: TextStyle(
+                      fontSize: 35,
+                      color: Colors.white,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
                 ),
-                SizedBox(
-                  width: 30,
+              )
+              : Material(
+                  child: Container(
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                          'Pontuação: ${GameView().controller.points}',
+                        ),
+                        SizedBox(
+                          width: 30,
+                        ),
+                        Text(
+                            'Imunidade e dobro de pontos ${GameView().controller.isBuffered.value ? 'Ativada!' : 'Desativada!'}'),
+                      ],
+                    ),
+                  ),
                 ),
-                Text(
-                    'Imunidade e dobro de pontos ${GameView().controller.isBuffered.value ? 'Ativada!' : 'Desativada!'}')
-              ],
-            ),
-          ),
-        ),
-      ),
-    );
-    // Center(
-    //     child: playerIsDead
-    //         ? Container(
-    //             height: 100,
-    //             width: 300,
-    //             child: Material(
-    //               color: Colors.black,
-    //               child: Center(
-    //                 child: Text(
-    //                   'Game over!',
-    //                   style: TextStyle(
-    //                     fontSize: 35,
-    //                     color: Colors.white,
-    //                     fontWeight: FontWeight.bold,
-    //                   ),
-    //                 ),
-    //               ),
-    //             ),
-    //           )
-    //         : SizedBox());
+        ));
   }
 }

@@ -26,8 +26,8 @@ class Food extends GameDecoration with ObjectCollision {
   void update(double dt) {
     seeComponentType<GameHero>(
       observed: (player) {
-        GameView().controller.increasePoints();
         removeFromParent();
+        GameView().controller.increasePoints();
       },
       radiusVision: 1,
     );
@@ -57,6 +57,7 @@ class BigFood extends GameDecoration with ObjectCollision {
   void update(double dt) {
     seeComponentType<GameHero>(
       observed: (player) async {
+        removeFromParent();
         const GameView().controller.isBuffered.value = true;
         print('Dobro de pontos ativados');
         await Future.delayed(
@@ -68,7 +69,6 @@ class BigFood extends GameDecoration with ObjectCollision {
             print('Dobro de pontos desativados');
           },
         );
-        removeFromParent();
       },
       radiusVision: 1,
     );
